@@ -1,0 +1,67 @@
+{
+  "name": "esign/craft-dynamate-signature",
+  "description": "Display a Dynamate-branded signature",
+  "keywords": [
+      "esign",
+      "dynamate",
+      "signature"
+  ],
+  "homepage": "https://github.com/esign/craft-dynamate-signature",
+  "license": "MIT",
+  "type": "craft-plugin",
+  "authors": [
+    {
+        "name": "Dieter Vanhove",
+        "email": "dieter.vanhove@dynamate.be",
+        "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "craftcms/cms": "^4.0|^5.0"
+  },
+  "require-dev": {
+    "codeception/codeception": "^5.1",
+    "codeception/module-asserts": "^3.0",
+    "codeception/module-yii2": "^1.1",
+    "craftcms/ecs": "dev-main",
+    "friendsofphp/php-cs-fixer": "^3.5",
+    "vlucas/phpdotenv": "^5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "esign\\craftdynamatesignature\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+        "esign\\craftdynamatesignature\\tests\\": "tests"
+    }
+  },
+  "extra": {
+    "handle": "_dynamate-signature",
+    "name": "DynamateSignature",
+    "developer": "dieter vanhove",
+    "documentationUrl": "",
+    "class": "esign\\craftdynamatesignature\\DynamateSignature"
+  },
+  "scripts": {
+    "check-cs": "ecs check --ansi",
+    "fix-cs": "ecs check --ansi --fix",
+    "phpstan": "phpstan --memory-limit=1G",
+    "test": [
+        "php tests/_craft/setup.php",
+        "codecept run unit --debug"
+    ],
+    "phpcs": "vendor/bin/php-cs-fixer fix"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

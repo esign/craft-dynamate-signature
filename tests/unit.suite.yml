@@ -1,0 +1,17 @@
+actor: UnitTester
+modules:
+    enabled:
+        - Asserts
+        - \Helper\Unit
+        - \craft\test\Craft:
+            configFile: 'tests/_craft/config/test.php'
+            entryUrl: 'http://test.craftcms.test/index.php'
+            projectConfig: {}
+            migrations: []
+            plugins:
+                _dynamate-signature:
+                    class: '\esign\craftdynamatesignature\DynamateSignature'
+                    handle: _dynamate-signature
+            cleanup: true
+            transaction: true
+            dbSetup: { clean: true, setupCraft: true } 
