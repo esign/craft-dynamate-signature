@@ -4,7 +4,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/esign/craft-dynamate-signature.svg?style=flat-square)](https://packagist.org/packages/esign/craft-dynamate-signature)
 ![GitHub Actions](https://github.com/esign/craft-dynamate-signature/actions/workflows/main.yml/badge.svg)
 
-This package allows you to display a [Dynamate](https://www.dynamate.be)-branded signature in your Laravel application.
+This package allows you to display a [Dynamate](https://www.dynamate.be)-branded signature in your Craft CMS application.
 
 ## Installation
 
@@ -26,7 +26,9 @@ To display the Dynamate-branded signature, you may use any of the following vari
 ```
 
 You can override the default signature template by creating your own template at:
-`templates/_dynamate-signature/signature.twig`
+```bash
+templates/_dynamate-signature/signature.twig
+```
 
 This will take precedence over the plugin's default template.
 
