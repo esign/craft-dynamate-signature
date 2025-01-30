@@ -3,13 +3,10 @@
 namespace esign\craftdynamatesignature;
 
 use Craft;
-use yii\base\Event;
 use craft\base\Plugin;
 use craft\events\RegisterTemplateRootsEvent;
-use craft\web\twig\variables\CraftVariable;
-use esign\craftdynamatesignature\variables\SignatureVariable;
 use craft\web\View;
-use esign\craftdynamatesignature\assets\SignatureAsset;
+use yii\base\Event;
 
 /**
  * DynamateSignature plugin
