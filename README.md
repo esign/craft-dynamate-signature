@@ -22,7 +22,20 @@ php craft plugin/install _dynamate-signature
 To display the Dynamate-branded signature, you may use any of the following variants:
 
 ```twig
-{% include '_dynamate-signature/signature.twig' %}
+{% include '_dynamate-signature/default.twig' %}
+{% include '_dynamate-signature/default.twig' with {
+    theme: 'light',
+    animated: true,
+    positionRight: '4rem',
+    positionAbsolute: true,
+    colorOverride: null,
+} %}
+
+{% include '_dynamate-signature/powered-by.twig' %}
+{% include '_dynamate-signature/powered-by.twig' with {
+    theme: 'light',
+    colorOverride: null,
+} %}
 ```
 
 You can override the default signature template by creating your own template at:
