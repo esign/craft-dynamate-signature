@@ -19,6 +19,11 @@ php craft plugin/install _dynamate-signature
 ```
 
 ## Usage
+To display the Dynamate contact information in your head, please use following variant:
+```twig
+{% include '_dynamate-signature/head.twig' %}
+```
+
 To display the Dynamate-branded signature, you may use any of the following variants:
 
 ```twig
