@@ -11,6 +11,7 @@
     positionAbsolute: positionAbsolute ?? true,
     positionRight: positionRight|default('0'),
     colorOverride: colorOverride|default(null),
+    transform: transform|default(null),
 } %}
 
 <a 
@@ -27,6 +28,7 @@
         z-index: 100;
         backface-visibility: hidden;
         {{ props.positionAbsolute ? 'right: ' ~ props.positionRight ~ ';' : '' }}
+        {{ props.transform ? 'transfrom: ' ~ props.transform ~ ';' : '' }}
     "
     onmouseover="this.style.opacity='1'"
     onmouseout="this.style.opacity='0.6'"
