@@ -45,7 +45,7 @@ To display the Dynamate-branded signature, you may use any of the following vari
 
 You can override the default signature template by creating your own template at:
 ```bash
-templates/_dynamate-signature/signature.twig
+templates/_dynamate-signature/default.twig
 ```
 
 This will take precedence over the plugin's default template.

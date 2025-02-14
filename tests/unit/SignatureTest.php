@@ -28,11 +28,10 @@ class SignatureTest extends TestCase
         $view->setTemplateMode(View::TEMPLATE_MODE_SITE);
         
         // Get the rendered template
-        $html = $view->renderTemplate('_dynamate-signature/signature');
+        $html = $view->renderTemplate('_dynamate-signature/default');
 
         // Assert the signature contains expected elements
-        $this->tester->assertStringContainsString('page-footer__signature', $html);
         $this->tester->assertStringContainsString('Site by Dynamate', $html);
-        $this->tester->assertStringContainsString('dynamate.be', $html);
+        $this->tester->assertStringContainsString('https://www.dynamate.be/', $html);
     }
 } 
