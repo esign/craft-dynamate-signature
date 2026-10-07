@@ -32,6 +32,6 @@ class SignatureTest extends TestCase
 
         // Assert the signature contains expected elements
         $this->tester->assertStringContainsString('Site by Dynamate', $html);
-        $this->tester->assertStringContainsString('https://www.dynamate.be/', $html);
+        $this->tester->assertStringContainsString('https://www.dynamate.be/expertise/e-commerce-web', $html);
     }
 } 
